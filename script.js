@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let spanishSentences = [];
     let currentSentenceIndex = 0;
 
+    // Variables para gestionar el deslizamiento (swipe)
+    let touchstartX = 0;
+    let touchendX = 0;
+
     // Referencia al menú de capítulos
     const chapterSelect = document.getElementById('chapter-select');
 
@@ -97,6 +101,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Escuchar cambios en el menú desplegable para cambiar entre capítulos
     chapterSelect.addEventListener('change', updateTexts);
 
-    // Cargar y mostrar el texto del primer capítulo por defecto al cargar la página
-    updateTexts();
+    // Detectar eventos táctiles (swipe)
+    
+     document.addEventListener('touchstart', (e) => {
+         touchstartX = e.changedTouches[0].screenX;
+     });
+
+     document.addEventListener('touchend', (e) => {
+         touchendX = e.changedTouches[0].screenX;
+         handleSwipe();
+     });
+
+     function handleSwipe() {
+         if (touchendX < touchstartX) {
+             nextSentence();  // Deslizar hacia la izquierda avanza a la siguiente oración
+         }
+         if (touchendX > touchstartX) {
+             previousSentence();  // Deslizar hacia la derecha retrocede a la oración anterior
+         }
+     }
+
+     // Cargar y mostrar el texto del primer capítulo por defecto al cargar la página
+     updateTexts();
 });
