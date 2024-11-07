@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const englishTextContainer = document.getElementById('english-text');
     const spanishTextContainer = document.getElementById('spanish-text');
 
+    // Referencias a los botones de navegación
+    const prevButton = document.getElementById('prev-sentence');
+    const nextButton = document.getElementById('next-sentence');
+
     // Variables para el estado actual
     let englishSentences = [];
     let spanishSentences = [];
@@ -57,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para aplicar gradiente a una oración
     function applyGradientToSentence(sentence) {
         if (!sentence) return '';
-        
+
         // Dividir la oración en palabras y envolver cada una en un span con la clase `word`
         return sentence.split(' ').map(word => `<span class="word">${word}</span>`).join(' ');
     }
@@ -77,7 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Evento de teclado para navegar con las flechas
+    // Escuchar clics en los botones de navegación
+    nextButton.addEventListener('click', nextSentence);
+    prevButton.addEventListener('click', previousSentence);
+
+    // Evento de teclado para navegar con las flechas del teclado
     document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowRight') {
             nextSentence();  // Flecha derecha para avanzar
