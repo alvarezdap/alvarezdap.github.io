@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.text-box {
+    width: 45%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #dfe6f1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.5; /* Inicialmente todas las oraciones tienen opacidad baja */
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.active {
+    opacity: 1;
+    color: #2a69e1; /* Color para el texto activo */
+}
+
+.text-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* styles.css */
+.word {
+    display: inline-block;
+    background: linear-gradient(to right, #4a90e2, #1c3d5a); /* Gradiente sólido con dos tonos de azul contrastantes */
+    -webkit-background-clip: text; /* Aplica el gradiente directamente en el texto para navegadores WebKit */
+    color: transparent; /* Hace que el gradiente de fondo se vea en el texto */
+    font-weight: bold;
+    margin: 0 2px; /* Espaciado entre palabras */
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1c3d5a; /* Azul oscuro */
+    margin: 20px 20px 20px; /* Espacio debajo del título */
+}
