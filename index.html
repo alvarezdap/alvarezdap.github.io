@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frankestein</title>
+    <title>Frankenstein</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 class="title">Frankenstein</h1>
+
     <!-- Menú de capítulos -->
     <nav class="chapter-menu">
         <label for="chapter-select">Selecciona un capítulo:</label>
         <select id="chapter-select">
-            <option value="letter1">1</option>
-            <option value="letter2">2</option>
-            <option value="letter3">3</option>
-            <!-- Añade más opciones según los capítulos disponibles -->
+            <option value="letter1">Carta 1</option>
+            <option value="letter2">Carta 2</option>
+            <option value="letter3">Carta 3</option>
         </select>
     </nav>
-    
+
+    <!-- Contenedor para los textos en inglés y español -->
     <div class="container">
-        
         <div class="text-box" id="english-text"></div>
         <div class="text-box" id="spanish-text"></div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Botones para avanzar y retroceder -->
+    <div class="navigation-buttons">
+        <button id="prev-sentence">Anterior</button>
+        <button id="next-sentence">Siguiente</button>
+    </div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
