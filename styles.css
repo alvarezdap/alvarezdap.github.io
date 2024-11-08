@@ -33,19 +33,29 @@
     margin: auto;
  }
  
- .text-box {
+/* Estilo para los contenedores de texto */
+.text-box {
     width: calc(50% - 10px);
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
- }
+    
+    /* Aumentar el tamaño de la fuente */
+    font-size: 1.5em; /* Ajusta este valor según lo grande que quieras el texto */
+  }
  
- .word {
-    background: linear-gradient(to right, #ff9999, #99ccff); /* Rojo más claro a azul más claro */
+/* Estilo para las palabras con gradiente */
+.word {
+    background: linear-gradient(to right, #ff0000, #0000ff); /* Gradiente rojo a azul */
     -webkit-background-clip: text;
     color: transparent;
+    
+    /* Aumentar el tamaño del texto si es necesario aquí también */
+    font-size: inherit; /* Usa el tamaño heredado del contenedor .text-box */
   }
+  
+  
   
 
  /* Media query para pantallas pequeñas (móviles) */

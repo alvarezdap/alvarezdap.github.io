@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Dividir la oración en palabras y envolver cada una en un span con la clase `word`
         return sentence.split(' ').map(word => `<span class="word">${word}</span>`).join(' ');
-    }
+      }
+      
 
     // Funciones para la navegación entre oraciones
     function nextSentence() {
