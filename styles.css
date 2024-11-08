@@ -42,10 +42,11 @@
  }
  
  .word {
-    background: linear-gradient(to right, #f06, #4a90e2);
+    background: linear-gradient(to right, #ff9999, #99ccff); /* Rojo más claro a azul más claro */
     -webkit-background-clip: text;
     color: transparent;
- }
+  }
+  
 
  /* Media query para pantallas pequeñas (móviles) */
  @media (max-width: 768px) {
@@ -54,4 +55,3 @@
        width: calc(100% - 40px);
        margin-bottom :20 px
  }
- 
